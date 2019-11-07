@@ -24,10 +24,10 @@ cli.command('buildcache', () => {
         apiVersion: config.elasticsearch.apiVersion,
         requestTimeout: 1000 * 60 * 60,
         keepAlive: false
-      }
-      if (config.elasticsearch.user) {
-        esConfig.httpAuth = config.elasticsearch.user + ':' +  config.elasticsearch.password
-      }
+      }	
+//      if (config.elasticsearch.user) {
+//        esConfig.httpAuth = config.elasticsearch.user + ':' +  config.elasticsearch.password
+//      }
     const esClient = new elasticsearch.Client(esConfig);
 
 

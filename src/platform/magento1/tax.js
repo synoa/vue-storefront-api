@@ -71,9 +71,9 @@ class TaxProxy extends AbstractTaxProxy {
           apiVersion: this._config.elasticsearch.apiVersion,
           requestTimeout: 5000
         }
-        if (this._config.elasticsearch.user) {
-          esConfig.httpAuth = this._config.elasticsearch.user + ':' + this._config.elasticsearch.password
-        }
+//        if (this._config.elasticsearch.user) {
+//          esConfig.httpAuth = this._config.elasticsearch.user + ':' + this._config.elasticsearch.password
+//        }
         
         const client = new es.Client(esConfig)
         const esQuery = {
